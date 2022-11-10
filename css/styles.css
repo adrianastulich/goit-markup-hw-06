@@ -30,6 +30,7 @@ a,
 nav,
 h1,
 h2,
+h4,
 p {
   padding: 0;
   margin: 0;
@@ -635,7 +636,6 @@ header {
   color: var(--brand-color);
   font-size: 16px;
   letter-spacing: 0.06em;
-  font-style: normal;
 }
 .footer-button-icon {
   fill: var(--brand-color);
@@ -643,7 +643,6 @@ header {
   padding: 0;
 }
 .input-signup-newsletter {
-  display: flex;
   width: 358px;
   height: 50px;
   background-color: var(--main-background-color);
@@ -663,7 +662,7 @@ header {
 }
 
 /* end of footer */
-
+/* start of modal */
 .backdrop {
   position: fixed;
   width: 100vw;
@@ -684,8 +683,14 @@ header {
 .is-hidden .modal {
   transform: translateY(100%) translateX(-100%) rotate(180deg);
 }
+.modal-title {
+  line-height: 23px;
+}
 .modal {
-  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 41px 40px 40px 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -694,6 +699,7 @@ header {
   background-color: var(--brand-color);
   border-radius: 4px;
   transition: transform 1000ms;
+  text-align: center;
 }
 .close-button {
   display: flex;
@@ -709,3 +715,37 @@ header {
   background-color: var(--brand-color);
   cursor: pointer;
 }
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: 50px;
+}
+.submit-button-modal {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--active-color);
+  font-weight: 700;
+  color: var(--brand-color);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  border: 0;
+}
+.fieldset-modal {
+  position: relative;
+  display: flex;
+  width: 448px;
+}
+.modal-label {
+  position: absolute;
+  top: -23px;
+  left: -3px;
+}
+.checkbox-field {
+  display: flex;
+}
+
+/* end of modal */
