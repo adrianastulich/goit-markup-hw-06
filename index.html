@@ -412,31 +412,37 @@
           </svg>
         </button>
         <h2 class="modal-title">Zostaw swoje dane w formularzu poniżej</h2>
-        <form class="modal-form" name="personaldata-form">
+        <form class="modal-form" name="personaldata-form" autocomplete="off">
           <fieldset class="fieldset-modal">
             <label class="modal-label" for="name">Imie</label>
             <svg class="modal-icons" width="18px" height="18px">
               <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
             </svg>
-            <input type="name" name="name" id="name" />
+            <input class="modal-input" type="name" name="name" id="name" />
           </fieldset>
           <fieldset class="fieldset-modal">
-            <label class="modal-label" for="phone">Telefon</label>
+            <label class="modal-label" for="phone">Telefon </label>
             <svg class="modal-icons" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
             </svg>
-            <input type="tel" name="phone-number" id="phone" />
+            <input class="modal-input" type="tel" name="phone-number" id="phone" />
           </fieldset>
           <fieldset class="fieldset-modal">
             <label class="modal-label" for="email">Email</label>
             <svg class="modal-icons" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
             </svg>
-            <input type="email" name="email" id="email" />
+            <input class="modal-input" type="email" name="email" id="email" />
           </fieldset>
-          <fieldset class="fieldset-modal">
+          <fieldset class="fieldset-modal comment">
             <label class="modal-label" for="comment">Komentarz</label>
-            <textarea name="comment" rows="5" placeholder="Wprowadź tekst" id="comment"></textarea>
+            <textarea
+              class="modal-input"
+              name="comment"
+              rows="6"
+              placeholder="Wprowadź tekst"
+              id="comment"
+            ></textarea>
           </fieldset>
           <div class="checkbox-field">
             <input type="checkbox" name="accept" value="" />
