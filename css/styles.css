@@ -685,6 +685,7 @@ header {
 }
 .modal-title {
   line-height: 23px;
+  margin-bottom: 12px;
 }
 .modal {
   position: relative;
@@ -720,7 +721,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 28px;
-  margin-top: 50px;
+  margin-top: 12px;
 }
 .submit-button-modal {
   text-align: center;
@@ -733,6 +734,7 @@ header {
   font-size: 16px;
   letter-spacing: 0.06em;
   border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .fieldset-modal {
   position: relative;
@@ -744,14 +746,20 @@ header {
   display: flex;
   align-items: center;
   padding: 9px 0 13px 12px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fieldset-modal:focus {
+  border: 1px solid var(--active-color);
+  fill: #2196f3;
+  visibility: visible;
 }
 .comment {
   height: 120px;
 }
 .modal-label {
   position: absolute;
-  top: -20px;
-  left: -2px;
+  top: -17px;
+  left: 0px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -760,6 +768,7 @@ header {
 }
 .checkbox-field {
   display: flex;
+  align-items: center;
 }
 .modal-icons {
   margin: 0;
@@ -780,7 +789,6 @@ header {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-input:focus {
@@ -788,6 +796,16 @@ header {
 }
 .modal-input:hover .modal-input:focus {
   border: 0;
+}
+.modal-links {
+  text-decoration: underline;
+  color: var(--active-color);
+}
+.modal-statement {
+  color: var(--text-color);
+}
+.modal-checkbox {
+  margin-right: 7px;
 }
 
 /* end of modal */
