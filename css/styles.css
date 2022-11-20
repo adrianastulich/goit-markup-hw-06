@@ -1,3 +1,4 @@
+/* --------- starf of global styles --------- */
 :root {
   --brand-color: #ffffff;
   --active-color: #2196f3;
@@ -63,10 +64,15 @@ img {
 header {
   border-bottom: 1px solid var(--border-color);
 }
+/* --------- end of global styles --------- */
+
+/* start of header */
 .header {
   display: flex;
   align-items: center;
 }
+/* end of header */
+
 /* start logo */
 .logo {
   color: var(--active-color);
@@ -186,8 +192,6 @@ header {
   color: var(--footer-contact-color);
 }
 /* end contacts */
-
-/* end of header */
 
 /* ----------------- start of main studio ----------------- */
 
@@ -653,7 +657,7 @@ header {
 .is-hidden .modal {
   transform: translateY(100%) translateX(-100%) rotate(180deg);
 }
-.modal-title {
+.modal__title {
   line-height: 23px;
   margin-bottom: 12px;
   font-weight: 700;
@@ -675,7 +679,7 @@ header {
   transition: transform 1000ms;
   text-align: center;
 }
-.close-button {
+.modal__button--close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -689,14 +693,14 @@ header {
   background-color: var(--brand-color);
   cursor: pointer;
 }
-.modal-form {
+.modal__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 28px;
   margin-top: 12px;
 }
-.fieldset-modal {
+.modal__fieldset {
   position: relative;
   display: flex;
   width: 448px;
@@ -707,17 +711,17 @@ header {
   align-items: center;
   padding: 9px 0 13px 12px;
 }
-.fieldset-modal:has(input:focus) {
+.modal__fieldset:has(input:focus) {
   border: 1px solid var(--active-color);
   fill: #2196f3;
 }
-.fieldset-modal:has(textarea:focus) {
+.modal__fieldset:has(textarea:focus) {
   border: 1px solid var(--active-color);
 }
-.comment {
+.modal__fieldset--comment {
   height: 120px;
 }
-.modal-label {
+.modal__label {
   position: absolute;
   top: -17px;
   left: 0px;
@@ -728,12 +732,12 @@ header {
   color: var(--text-color);
 }
 
-.modal-icons {
+.modal__icon {
   margin: 0;
   padding: 0;
   margin-right: 5px;
 }
-.modal-input {
+.modal__input {
   border: 0;
   width: 100%;
   font-size: 14px;
@@ -743,33 +747,33 @@ header {
   color: var(--text-color);
   resize: none;
 }
-.modal-input::placeholder {
+.modal__input::placeholder {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-input:focus {
+.modal__input:focus {
   outline: 0;
 }
-.modal-input:hover .modal-input:focus {
+.modal__input:hover .modal__input:focus {
   border: 0;
 }
-.modal-links {
+.modal__links {
   text-decoration: underline;
   color: var(--active-color);
 }
-.modal-statement {
+.modal__statement {
   color: var(--text-color);
 }
 
-.checkbox-field {
+.modal__checkbox {
   display: flex;
   align-items: center;
   position: relative;
   cursor: pointer;
 }
-.checkbox-field .modal-checkbox {
+.modal__checkbox .checkbox__input {
   cursor: pointer;
   position: absolute;
   left: -20px;
@@ -778,7 +782,7 @@ header {
   opacity: 0;
   z-index: 3;
 }
-.checkmark {
+.checkbox__checkmark {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -788,7 +792,7 @@ header {
   left: -19.5px;
   top: 1px;
 }
-.checkmark::after {
+.checkbox__checkmark::after {
   display: none;
   content: '';
   width: 15px;
@@ -799,13 +803,13 @@ header {
   left: -0.75px;
   top: -0.85px;
 }
-.checkbox-field .modal-checkbox:checked ~ .checkmark:after {
+.modal__checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
   display: block;
 }
-.checkbox-field .modal-checkbox:checked ~ .checkmark {
+.modal__checkbox .checkbox__input:checked ~ .checkbox__checkmark {
   border: 0;
 }
-.checkbox-icon {
+.checkbox__icon {
   width: 13px;
   height: 11px;
   fill: white;

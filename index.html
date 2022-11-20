@@ -405,52 +405,52 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button" data-modal-close>
+        <button type="button" class="modal__button--close" data-modal-close>
           <svg class="close-button-icon" width="18px" height="18px">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
         </button>
-        <p class="modal-title">Zostaw swoje dane w formularzu poniżej</p>
-        <form class="modal-form" name="personaldata-form" autocomplete="off">
-          <fieldset class="fieldset-modal">
-            <label class="modal-label" for="name">Imie</label>
-            <svg class="modal-icons" width="18px" height="18px">
+        <p class="modal__title">Zostaw swoje dane w formularzu poniżej</p>
+        <form class="modal__form" name="personaldata-form" autocomplete="off">
+          <fieldset class="modal__fieldset">
+            <label class="modal__label" for="name">Imie</label>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
             </svg>
-            <input class="modal-input" type="name" name="name" id="name" />
+            <input class="modal__input" type="name" name="name" id="name" />
           </fieldset>
-          <fieldset class="fieldset-modal">
-            <label class="modal-label" for="phone">Telefon </label>
-            <svg class="modal-icons" width="18px" height="18px">
+          <fieldset class="modal__fieldset">
+            <label class="modal__label" for="phone">Telefon </label>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
             </svg>
-            <input class="modal-input" type="tel" name="phone-number" id="phone" />
+            <input class="modal__input" type="tel" name="phone-number" id="phone" />
           </fieldset>
-          <fieldset class="fieldset-modal">
-            <label class="modal-label" for="email">Email</label>
-            <svg class="modal-icons" width="18px" height="18px">
+          <fieldset class="modal__fieldset">
+            <label class="modal__label" for="email">Email</label>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
             </svg>
-            <input class="modal-input" type="email" name="email" id="email" />
+            <input class="modal__input" type="email" name="email" id="email" />
           </fieldset>
-          <fieldset class="fieldset-modal comment">
-            <label class="modal-label" for="comment">Komentarz</label>
+          <fieldset class="modal__fieldset modal__fieldset--comment">
+            <label class="modal__label" for="comment">Komentarz</label>
             <textarea
-              class="modal-input"
+              class="modal__input"
               name="comment"
               rows="6"
               placeholder="Wprowadź tekst"
               id="comment"
             ></textarea>
           </fieldset>
-          <div class="checkbox-field">
-            <input class="modal-checkbox" type="checkbox" name="accept" />
-            <span class="checkmark">
-              <svg class="checkbox-icon"><use href="./images/icons.svg#icon-vector"</svg></span
-            >
-            <p class="modal-statement">
-              Oświadczam iż akceptuję <a class="modal-links" href="/">Regulamin</a> i
-              <a class="modal-links" href="/">Politykę Prywatności.</a>
+          <div class="modal__checkbox">
+            <input class="checkbox__input" type="checkbox" name="accept" />
+            <span class="checkbox__checkmark">
+              <svg class="checkbox__icon"><use href="./images/icons.svg#icon-vector"></use></svg>
+            </span>
+            <p class="modal__statement">
+              Oświadczam iż akceptuję <a class="modal__links" href="/">Regulamin</a> i
+              <a class="modal__links" href="/">Politykę Prywatności.</a>
             </p>
           </div>
 

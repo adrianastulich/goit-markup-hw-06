@@ -1,0 +1,260 @@
+/* start of modal */
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .is-hidden .modal {
+    transform: translateY(100%) translateX(-100%) rotate(180deg);
+  }
+  .modal-title {
+    line-height: 23px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+  }
+  .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--brand-color);
+    border-radius: 4px;
+    transition: transform 1000ms;
+    text-align: center;
+  }
+  .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: var(--brand-color);
+    cursor: pointer;
+  }
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-top: 12px;
+  }
+  .submit-button-modal {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--active-color);
+    font-weight: 700;
+    color: var(--brand-color);
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    border: 0;
+    padding: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  .fieldset-modal {
+    position: relative;
+    display: flex;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 9px 0 13px 12px;
+  }
+  .fieldset-modal:has(input:focus) {
+    border: 1px solid var(--active-color);
+    fill: #2196f3;
+  }
+  .fieldset-modal:has(textarea:focus) {
+    border: 1px solid var(--active-color);
+  }
+  .comment {
+    height: 120px;
+  }
+  .modal-label {
+    position: absolute;
+    top: -17px;
+    left: 0px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+  }
+  
+  .modal-icons {
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+  }
+  .modal-input {
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    resize: none;
+  }
+  .modal-input::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .modal-input:focus {
+    outline: 0;
+  }
+  .modal-input:hover .modal-input:focus {
+    border: 0;
+  }
+  .modal-links {
+    text-decoration: underline;
+    color: var(--active-color);
+  }
+  .modal-statement {
+    color: var(--text-color);
+  }
+  
+  .checkbox-field {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .checkbox-field .modal-checkbox {
+    cursor: pointer;
+    position: absolute;
+    left: -20px;
+    width: 16px;
+    height: 15px;
+    opacity: 0;
+    z-index: 3;
+  }
+  .checkmark {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--brand-text-color);
+    border-radius: 3px;
+    fill: #000000;
+    left: -19.5px;
+    top: 1px;
+  }
+  .checkmark::after {
+    display: none;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #2196f3;
+    border-radius: 3px;
+    position: absolute;
+    left: -0.75px;
+    top: -0.85px;
+  }
+  .checkbox-field .modal-checkbox:checked ~ .checkmark:after {
+    display: block;
+  }
+  .checkbox-field .modal-checkbox:checked ~ .checkmark {
+    border: 0;
+  }
+  .checkbox-icon {
+    width: 13px;
+    height: 11px;
+    fill: white;
+    position: absolute;
+    z-index: 2;
+    left: 0.5px;
+    top: 1px;
+  }
+  
+  /* end of modal */ ;
+
+
+  HTML MODAL
+  <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>
+          <svg class="close-button-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Zostaw swoje dane w formularzu poniżej</p>
+        <form class="modal-form" name="personaldata-form" autocomplete="off">
+          <fieldset class="fieldset-modal">
+            <label class="modal-label" for="name">Imie</label>
+            <svg class="modal-icons" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+            </svg>
+            <input class="modal-input" type="name" name="name" id="name" />
+          </fieldset>
+          <fieldset class="fieldset-modal">
+            <label class="modal-label" for="phone">Telefon </label>
+            <svg class="modal-icons" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+            </svg>
+            <input class="modal-input" type="tel" name="phone-number" id="phone" />
+          </fieldset>
+          <fieldset class="fieldset-modal">
+            <label class="modal-label" for="email">Email</label>
+            <svg class="modal-icons" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+            </svg>
+            <input class="modal-input" type="email" name="email" id="email" />
+          </fieldset>
+          <fieldset class="fieldset-modal comment">
+            <label class="modal-label" for="comment">Komentarz</label>
+            <textarea
+              class="modal-input"
+              name="comment"
+              rows="6"
+              placeholder="Wprowadź tekst"
+              id="comment"
+            ></textarea>
+          </fieldset>
+          <div class="checkbox-field">
+            <input class="modal-checkbox" type="checkbox" name="accept" />
+            <span class="checkmark">
+              <svg class="checkbox-icon"><use href="./images/icons.svg#icon-vector"</svg></span
+            >
+            <p class="modal-statement">
+              Oświadczam iż akceptuję <a class="modal-links" href="/">Regulamin</a> i
+              <a class="modal-links" href="/">Politykę Prywatności.</a>
+            </p>
+          </div>
+
+          <button class="button" type="submit">Wyślij</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
